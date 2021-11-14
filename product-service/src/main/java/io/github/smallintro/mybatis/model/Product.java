@@ -3,8 +3,8 @@ package io.github.smallintro.mybatis.model;
 import lombok.Builder;
 import lombok.Data;
 
-@Builder
 @Data
+@Builder
 public class Product {
     private int productId;
     private String productName;

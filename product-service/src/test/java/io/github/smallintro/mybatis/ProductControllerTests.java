@@ -23,6 +23,7 @@ class ProductControllerTests extends ProductServiceApplicationTests {
 
     @Test
     public void testController_addProduct() throws Exception {
+        productService.removeProducts(Arrays.asList(new Integer[]{101}));
         String jsonRequest = objectMapper.writeValueAsString(buildProduct(101));
         RequestBuilder requestBuilder = post("/save")
                 .accept(MediaType.APPLICATION_JSON)
